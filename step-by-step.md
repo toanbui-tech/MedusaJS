@@ -58,16 +58,14 @@ Phần này mình sẽ tập trung tuyệt đối, cố gắng hiểu và kết 
    Workflow Step
    Module Services and Loaders
    ```
-- Modules
-- Module Links
-- Data Models
-- API Routes
-- Scheduled Jobs
-- Query
-- Workflows
-- Events and Subscribers
-- Plugins
-
-### 3. A Customizable admin dashboard
-    - 
+##### 2.2.2 📦Modules:
+ - Là gói chức năng (feature/domain) riêng biệt, nằm trong thư mục như src/modules/..
+ - Có container riêng, chỉ chứa service, loader và tài nguyên nội bộ của module đó.
+ - Không thể truy cập service từ Medusa container hay dùng query từ Medusa — vì nó cách ly hoàn toàn.
+ - 🔍 Mẹo phân biệt ngắn gọn:
+   + Module = “Gói nhỏ riêng”, có contener riêng, không dùng Medusa container.
+   + Medusa container = “Trung tâm”, mọi thứ dùng chung, từ query đến các module lớn, route, job…
+ - 👉 Ghi nhớ:
+   + Nếu code nằm trong module (service, loader), nó dùng container của module → không thể resolve resource như query từ Medusa container.
+   + Nếu code nằm ở bên ngoài (API route, subscriber, job, workflow step), sử dụng Medusa container → resolve đầy đủ resource dùng chung.
     
