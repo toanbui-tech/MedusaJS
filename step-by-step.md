@@ -68,4 +68,5 @@ Phần này mình sẽ tập trung tuyệt đối, cố gắng hiểu và kết 
  - 👉 Ghi nhớ:
    + Nếu code nằm trong module (service, loader), nó dùng container của module → không thể resolve resource như query từ Medusa container.
    + Nếu code nằm ở bên ngoài (API route, subscriber, job, workflow step), sử dụng Medusa container → resolve đầy đủ resource dùng chung.
-    
+
+   Module là nơi tạo  các  tùy chỉnh mới, ví dụ tạo một domain  mới là post  (bao gồm định nghĩa model  để migrate ra table mới,  tạo service) rồi sau đó  export nỏa ngoài để cho  những chỗ khác sử dụng. tạo  1 workflow đơn giản cho quá trình tạo post.
