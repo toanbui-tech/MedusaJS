@@ -74,4 +74,4 @@ Phần này mình sẽ tập trung tuyệt đối, cố gắng hiểu và kết 
     + reuired: index.ts, service.ts
     + optional: models, migrations, loaders
   - Loaders:
-  - 
+  - Module Isolation:
